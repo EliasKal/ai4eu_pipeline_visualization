@@ -1,0 +1,2 @@
+id,zone,municipality,area,station,type,eoi,component,latitude,longitude,timestep,isVisible,unit,values
+3118,Øst og Sørlandet,Kristiansand,Kristiansand,Bjørndalssletta,Veinær stasjon,NO0134A,NO,58.16232369,8.02377464,3600,FALSE,µg/m³,

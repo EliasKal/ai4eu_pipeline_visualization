@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>D3 tries with Leaflet</title>
+        <script src="{{ url_for('static', filename='js/d3.v5.min.js') }}"></script>
+        
+        <link rel="stylesheet" href="{{ url_for('static', filename='leaflet/leaflet.css') }}"/>
+        <script src="{{ url_for('static', filename='leaflet/leaflet.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/graph.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/glyphcircle.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/glyphtwocircles.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/glyphmanycircles.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/glyphpolygon.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/glyphstar.js') }}"></script>
+
+		<style>
+			.container {
+				margin: 5px;
+				float: left;
+			}
+
+			/* From https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+			.slider {
+			  -webkit-appearance: none;
+			  width: 815;
+			  height: 5px;
+			  border-radius: 5px;
+			  background: #d3d3d3;
+			  outline: none;
+			  opacity: 0.7;
+			  -webkit-transition: .2s;
+			  transition: opacity .2s;
+			  margin-top: 10px;
+			  margin-left: -7px;
+			}
+
+			.slider::-webkit-slider-thumb {
+			  -webkit-appearance: none;
+			  appearance: none;
+			  width: 25px;
+			  height: 25px;
+			  border-radius: 50%;
+			  background: #4CAF50;
+			  cursor: pointer;
+			}
+
+			.slider::-moz-range-thumb {
+			  width: 15px;
+			  height: 15px;
+			  border-radius: 50%;
+			  background: #4CAF50;
+			  cursor: pointer;
+			}
+
+			#controls div {
+				padding-top: 5px;	
+			}
+		</style>
+    </head>
+    <body>
+        <div id="map_container" class="container"></div>
+        <div id="graph_container" class="container"></div>
+		<div id="controls" style="clear: both"></div>
+        <!-- <script src="main.js"></script> -->
+        <!-- <script src="main_graph.js"></script> -->
+        <script src="{{ url_for('static', filename='js/main_all_2.js') }}"></script>
+    </body>
+</html>

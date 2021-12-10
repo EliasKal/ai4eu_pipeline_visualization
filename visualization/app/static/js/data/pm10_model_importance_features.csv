@@ -1,0 +1,191 @@
+feature,importance
+Trondheim Torg NO2,0.1344686028507272
+Strindheim skole PM10,0.07276951973267429
+Trondheim Torg PM10,0.025079896086668857
+Elgeseter gate 24 humidity,0.02205516066829441
+Ila skole PM10,0.02055946078935592
+Ila skole PM2.5,0.015022858154076602
+Utleira skole NO2,0.012683998689541568
+Elgeseter gate 24 PM10,0.012107461026601558
+Sandbakken barnehage PM10,0.010932365543617447
+Charlottenlund barnehage NO,0.010712833424501396
+Angelltrøa barnehage distance,0.009336060173596067
+Trondheim Torg distance,0.009215686571609955
+Ugla skole distance,0.009191592607055972
+Byneset og Nypantunet HVS distance,0.00914419366166168
+Bispehaugen skole distance,0.009070599255198788
+Berg skole distance,0.009049877832732992
+Åsvang skole distance,0.008964771910677136
+Utleira skole distance,0.008914152320053274
+Lilleby skole distance,0.00888842997625394
+Singsaker skole distance,0.008790933610510593
+Strindheim skole distance,0.00877540733425947
+Charlottenlund barnehage distance,0.00877149031057288
+Sjøskogbekken Fus Barnehage distance,0.008758086124048147
+Hesteskoen barnehage distance,0.008741729984505316
+Tanem skole (Tanemshallen) distance,0.008738954240453919
+Huseby barneskole distance,0.008706330627938413
+Sandbakken barnehage distance,0.008686315532339372
+Elgeseter gate 24 distance,0.00865023999521626
+Lademoen stasjon distance,0.008602455447737977
+Tiller HVS distance,0.0085864750633851
+Lilleby skole PM10,0.008519629300420172
+Ila skole distance,0.008493859028088835
+Sjetne skole distance,0.00848540275278095
+Åsheim barneskole distance,0.008420302892747623
+Åsheim barneskole humidity,0.008065056368783087
+Angelltrøa barnehage PM10,0.007554659968739538
+Trondheim Torg PM2.5,0.007036206327327181
+Sandbakken barnehage PM2.5,0.006569890910276209
+Elgeseter gate 24 NO,0.006414981145361945
+Lilleby skole PM2.5,0.00621839411583265
+Tiller HVS NO,0.006185221199916885
+Elgeseter gate 24 PM2.5,0.005947069707629428
+Strindheim skole PM2.5,0.005946319378000161
+Strindheim skole NO,0.005828998167481557
+Åsvang skole O3,0.005793121728021626
+Angelltrøa barnehage NO2,0.005579750239670846
+Tanem skole (Tanemshallen) NO,0.005201667031529665
+Singsaker skole PM10,0.00503558616513191
+Angelltrøa barnehage humidity,0.005000256667374355
+Sverresborg skole NO,0.004978083534959199
+Strindheim skole NO2,0.004926433456247202
+Tiller HVS O3,0.004885484041777633
+Ugla skole humidity,0.004719434589293581
+Charlottenlund barnehage O3,0.00471570282694165
+Berg skole humidity,0.004627378592141938
+Tiller HVS NO2,0.004609645627711757
+Lilleby skole O3,0.004598648875101774
+Åsheim barneskole O3,0.004550157821815846
+Elgeseter gate 24 NO2,0.004424021586894631
+Sjøskogbekken Fus Barnehage PM10,0.004423531028696974
+Utleira skole O3,0.004355187320121031
+Utleira skole PM10,0.004318171362740699
+Lademoen stasjon NO2,0.004260143411120106
+Åsvang skole NO,0.004235538864465051
+Lademoen stasjon PM10,0.004202843778934106
+Berg skole O3,0.0041630609401351075
+Bispehaugen skole PM10,0.004118050132112576
+Charlottenlund barnehage NO2,0.004071312880907863
+Charlottenlund barnehage humidity,0.004065002405612546
+Ugla skole NO,0.00396439305889436
+Tanem skole (Tanemshallen) NO2,0.0038194512108632775
+Hesteskoen barnehage PM2.5,0.0038022366417201116
+Hesteskoen barnehage humidity,0.003769768522120169
+Hesteskoen barnehage NO2,0.0037613168496162764
+Byneset og Nypantunet HVS NO2,0.003744818040355091
+Ugla skole PM2.5,0.0037361775427903797
+Ugla skole O3,0.003718939569288176
+Ila skole O3,0.003685367634515027
+Sjøskogbekken Fus Barnehage humidity,0.0036487653208295756
+Berg skole NO2,0.0036100160739840656
+Trondheim Torg humidity,0.0035785388492797503
+Byneset og Nypantunet HVS PM10,0.0034759361834492165
+Tiller HVS PM10,0.0034675882074587548
+Huseby barneskole PM10,0.003450589754638338
+Byneset og Nypantunet HVS NO,0.0034185503758586903
+Berg skole PM10,0.003408443725674704
+Sjetne skole humidity,0.003395110563369657
+Utleira skole NO,0.0033784244283175035
+Lilleby skole NO,0.003344808835261379
+Ila skole NO2,0.0033295277964218595
+Åsvang skole PM10,0.003320458257373783
+Singsaker skole O3,0.0032476840454988714
+Hesteskoen barnehage PM10,0.0032388577240778428
+Angelltrøa barnehage NO,0.003225927105524719
+Huseby barneskole O3,0.0031978105822978867
+Byneset og Nypantunet HVS O3,0.0031710459618107616
+Ila skole NO,0.0031659744962036535
+Trondheim Torg O3,0.003112835711163141
+Singsaker skole NO2,0.0030938210605256774
+Bispehaugen skole O3,0.0030779462660434757
+Tanem skole (Tanemshallen) PM10,0.003064944907359052
+Lademoen stasjon PM2.5,0.0030640141231731994
+Strindheim skole humidity,0.003048774318807037
+Huseby barneskole NO2,0.0029656754852100263
+Angelltrøa barnehage PM2.5,0.002938692223367164
+Tanem skole (Tanemshallen) PM2.5,0.002872052865130861
+Sjetne skole PM2.5,0.002856162364757244
+Huseby barneskole NO,0.002832625347443825
+Sjetne skole O3,0.002814511852090685
+Sjøskogbekken Fus Barnehage PM2.5,0.002782290880505201
+Sverresborg skole PM2.5,0.0027192236561433113
+Charlottenlund barnehage PM2.5,0.0026798790243119093
+Ugla skole NO2,0.0026634902867165005
+Sjøskogbekken Fus Barnehage O3,0.002654619029860774
+Singsaker skole NO,0.0026516709278493976
+Sverresborg skole NO2,0.0026387322393712233
+Lilleby skole humidity,0.002634448343914002
+Strindheim skole O3,0.002632745464318591
+Ugla skole PM10,0.0026087834073456133
+Hesteskoen barnehage NO,0.002608448723564557
+Sandbakken barnehage NO2,0.00255529292361935
+Tiller HVS PM2.5,0.002542957723996532
+Åsheim barneskole NO,0.002535434495299553
+Lademoen stasjon humidity,0.0024744342747193876
+Trondheim Torg NO,0.0024429575581134443
+Åsvang skole humidity,0.0024335076416714695
+Sjetne skole NO2,0.0024235858958596185
+Bispehaugen skole humidity,0.002413335886981669
+Åsheim barneskole NO2,0.002391164513969461
+Åsheim barneskole PM2.5,0.0023649064226154664
+Sjøskogbekken Fus Barnehage NO,0.0023574747878945244
+Sverresborg skole PM10,0.0023404562941170648
+Huseby barneskole humidity,0.0022975199134235022
+Sverresborg skole O3,0.0022928918663229414
+Åsvang skole PM2.5,0.0022745489512117616
+Sjetne skole NO,0.0022576729861151766
+Charlottenlund barnehage PM10,0.0022562642350428294
+Singsaker skole PM2.5,0.002165229016547583
+Sjøskogbekken Fus Barnehage NO2,0.002164457209301697
+Sandbakken barnehage O3,0.002160108221002437
+Utleira skole PM2.5,0.0021357682247621205
+Singsaker skole humidity,0.002130919239312782
+Sandbakken barnehage NO,0.0021282754898771547
+Tiller HVS humidity,0.0020972765379953825
+Sjetne skole PM10,0.002046507998443793
+Bispehaugen skole PM2.5,0.002020708773797531
+Byneset og Nypantunet HVS PM2.5,0.0020190400584523243
+Åsheim barneskole PM10,0.0020097290666611966
+Huseby barneskole PM2.5,0.0019489508968362156
+Berg skole PM2.5,0.001924830614092091
+Byneset og Nypantunet HVS temperature,0.0017142138948936486
+Hesteskoen barnehage temperature,0.0017069319168421643
+Elgeseter gate 24 O3,0.0017009807097935251
+Sandbakken barnehage humidity,0.001604425762850753
+Tanem skole (Tanemshallen) humidity,0.0015706496478685925
+Byneset og Nypantunet HVS humidity,0.0015630218091879616
+Åsvang skole NO2,0.0014257763767812955
+Ila skole humidity,0.0013758872305668546
+Hesteskoen barnehage O3,0.0013707811445643975
+Tanem skole (Tanemshallen) temperature,0.0013606238002141365
+Utleira skole temperature,0.001296807177884706
+Lilleby skole temperature,0.0012811663778648347
+Utleira skole humidity,0.0012583141951450923
+Lademoen stasjon temperature,0.0012349793347808757
+Bispehaugen skole temperature,0.0011510033896407112
+Tiller HVS temperature,0.001149512858301764
+Åsheim barneskole temperature,0.0011232180053206851
+Singsaker skole temperature,0.0010435469371438044
+Ugla skole temperature,0.0010360347305131952
+Sandbakken barnehage temperature,0.001027792953946895
+Elgeseter gate 24 temperature,0.0010137883078770336
+Berg skole temperature,0.001001037596737845
+Sjøskogbekken Fus Barnehage temperature,0.0009855707402924246
+Sjetne skole temperature,0.000972651267597501
+Sverresborg skole temperature,0.0009584189261843532
+Angelltrøa barnehage temperature,0.0009499671361613912
+Lademoen stasjon NO,0.0009463897906108654
+Trondheim Torg temperature,0.0009292307239864444
+Ila skole temperature,0.0009184836010909334
+Charlottenlund barnehage temperature,0.0008454608237537366
+Strindheim skole temperature,0.0008432694129310607
+Huseby barneskole temperature,0.0008201312928359873
+Åsvang skole temperature,0.0008080565157456045
+Lademoen stasjon O3,0.0007496529328510701
+Berg skole NO,4.2320579817734964e-05
+Lilleby skole NO2,2.816299821833577e-07
+Bispehaugen skole NO2,2.3592403547608764e-07
+Bispehaugen skole NO,1.1524016763115572e-07
+Tanem skole (Tanemshallen) O3,0.0
+Angelltrøa barnehage O3,0.0
