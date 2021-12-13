@@ -44,7 +44,7 @@ class Databroker(databroker_pb2_grpc.DatabrokerServicer):
 
     def get_next(self, request, context):
         response = databroker_pb2.Features()
-        if self.current_row >= len(no2_data.shape[0]):
+        if self.current_row >= no2_data.shape[0]:
             context.set_code(grpc.StatusCode.NOT_FOUND)
             context.set_details("all data has been processed")
         else:

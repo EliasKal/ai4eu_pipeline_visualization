@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Features {
+  bytes no2_data = 1;
+  bytes pm10_data = 2;
+  bytes pm25_data = 3;
+}
+
+message Predictions {
+  double no2_value = 1;
+  double pm10_value = 2;
+  double pm25_value = 3;
+}
+
+service Prediction {
+  rpc predict(Features) returns(Predictions);
+}
