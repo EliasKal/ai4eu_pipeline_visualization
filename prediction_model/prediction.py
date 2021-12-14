@@ -8,11 +8,11 @@ import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 import pickle
 
-port = 8061
+port = 8062
 
-def pollutants_prediction(no2_vector, pm10_vector, pm25_vector):
+# def pollutants_prediction(no2_vector, pm10_vector, pm25_vector):
 
-    return (no2_model.predict(no2_vector), pm10_model.predict(pm10_vector), pm25_model.predict(pm25_vector))
+#     return (no2_model.predict(no2_vector),self.pm10_model.predict(pm10_vector), self.pm25_model.predict(pm25_vector))
 
 
 class Prediction(prediction_pb2_grpc.PredictionServicer):
@@ -34,10 +34,10 @@ class Prediction(prediction_pb2_grpc.PredictionServicer):
         pm10 = np.frombuffer(pm10).reshape(1,-1)
         pm25 = np.frombuffer(pm25).reshape(1,-1)
 
-        response.no2_value = self.no2_model.predict(no2)
-        response.pm10_value = self.pm10_model.predict(pm10)
-        response.pm25_value = self.pm25_model.predict(pm25)
-        print(elf.no2_model.predict(no2))
+        response.no2_value = self.no2_model.predict(no2[0])
+        response.pm10_value = self.pm10_model.predict(pm10[0])
+        response.pm25_value = self.pm25_model.predict(pm25[0])
+        print(self.no2_model.predict(no2))
         return response
 
 #host server
