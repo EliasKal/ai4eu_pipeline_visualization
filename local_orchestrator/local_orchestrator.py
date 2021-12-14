@@ -8,12 +8,14 @@ import schedule
 def update_data():
     try:
         while True:
-            # Fetch data sample from external APIs
+            # Fetch data sample from databroker
             data_sample = data_stub.get_next(orchestrator_pb2.Empty())
 
-            # Call pre-trained calibration module
+            # Call models to predict next value
             predict_data = prediction_stub.predict(data_sample)
-            print("ok")
+
+            #print to test it works
+            print('ok')
     except Exception as e:
         print("Got an exception ", str(e))
 
@@ -27,7 +29,7 @@ data_stub = orchestrator_pb2_grpc.DatabrokerStub(data_channel)
 prediction_channel = grpc.insecure_channel("localhost:8062")
 prediction_stub = orchestrator_pb2_grpc.PredictionStub(prediction_channel)
 
-## Or, do an update every 10 seconds
+## do an update every 10 seconds
 schedule.every(10).seconds.do(update_data)
 
 try:

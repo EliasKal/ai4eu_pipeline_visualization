@@ -34,10 +34,11 @@ class Prediction(prediction_pb2_grpc.PredictionServicer):
         pm10 = np.frombuffer(pm10).reshape(1,-1)
         pm25 = np.frombuffer(pm25).reshape(1,-1)
 
-        response.no2_value = self.no2_model.predict(no2[0])
-        response.pm10_value = self.pm10_model.predict(pm10[0])
-        response.pm25_value = self.pm25_model.predict(pm25[0])
-        print(self.no2_model.predict(no2))
+        #[0] helps with returning the value instead of numpy array
+        response.no2_value = self.no2_model.predict(no2)[0]
+        response.pm10_value = self.pm10_model.predict(pm10)[0]
+        response.pm25_value = self.pm25_model.predict(pm25)[0]
+
         return response
 
 #host server
