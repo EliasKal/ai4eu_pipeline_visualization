@@ -24,7 +24,8 @@ service Prediction {
   rpc predict(Features) returns(Predictions);
 }
 
-
-
+service Visualization {
+  rpc get_next(Predictions) returns(Empty);
+}
 
 

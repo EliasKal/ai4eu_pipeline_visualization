@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x12orchestrator.proto\"\x07\n\x05\x45mpty\"B\n\x08\x46\x65\x61tures\x12\x10\n\x08no2_data\x18\x01 \x01(\x0c\x12\x11\n\tpm10_data\x18\x02 \x01(\x0c\x12\x11\n\tpm25_data\x18\x03 \x01(\x0c\"H\n\x0bPredictions\x12\x11\n\tno2_value\x18\x01 \x01(\x01\x12\x12\n\npm10_value\x18\x02 \x01(\x01\x12\x12\n\npm25_value\x18\x03 \x01(\x01\x32+\n\nDatabroker\x12\x1d\n\x08get_next\x12\x06.Empty\x1a\t.Features20\n\nPrediction\x12\"\n\x07predict\x12\t.Features\x1a\x0c.Predictionsb\x06proto3'
+  serialized_pb=b'\n\x12orchestrator.proto\"\x07\n\x05\x45mpty\"B\n\x08\x46\x65\x61tures\x12\x10\n\x08no2_data\x18\x01 \x01(\x0c\x12\x11\n\tpm10_data\x18\x02 \x01(\x0c\x12\x11\n\tpm25_data\x18\x03 \x01(\x0c\"H\n\x0bPredictions\x12\x11\n\tno2_value\x18\x01 \x01(\x01\x12\x12\n\npm10_value\x18\x02 \x01(\x01\x12\x12\n\npm25_value\x18\x03 \x01(\x01\x32+\n\nDatabroker\x12\x1d\n\x08get_next\x12\x06.Empty\x1a\t.Features20\n\nPrediction\x12\"\n\x07predict\x12\t.Features\x1a\x0c.Predictions21\n\rVisualization\x12 \n\x08get_next\x12\x0c.Predictions\x1a\x06.Emptyb\x06proto3'
 )
 
 
@@ -219,5 +219,31 @@ _PREDICTION = _descriptor.ServiceDescriptor(
 _sym_db.RegisterServiceDescriptor(_PREDICTION)
 
 DESCRIPTOR.services_by_name['Prediction'] = _PREDICTION
+
+
+_VISUALIZATION = _descriptor.ServiceDescriptor(
+  name='Visualization',
+  full_name='Visualization',
+  file=DESCRIPTOR,
+  index=2,
+  serialized_options=None,
+  create_key=_descriptor._internal_create_key,
+  serialized_start=268,
+  serialized_end=317,
+  methods=[
+  _descriptor.MethodDescriptor(
+    name='get_next',
+    full_name='Visualization.get_next',
+    index=0,
+    containing_service=None,
+    input_type=_PREDICTIONS,
+    output_type=_EMPTY,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+])
+_sym_db.RegisterServiceDescriptor(_VISUALIZATION)
+
+DESCRIPTOR.services_by_name['Visualization'] = _VISUALIZATION
 
 # @@protoc_insertion_point(module_scope)

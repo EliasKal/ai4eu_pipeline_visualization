@@ -1,6 +1,6 @@
 Promise.all([
 	d3.csv("/static/data/low_cost_sensors.csv"),
-	d3.csv("/static/data/low_cost_sensor_data.csv"),
+	d3.csv("/static/data/results.csv"),
 	// d3.csv("data/low_cost_sensor_data_Nov_Feb.csv"),
 ]).then(res => {
 

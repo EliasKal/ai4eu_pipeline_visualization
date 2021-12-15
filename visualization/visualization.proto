@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message Empty {
+}
+
+message Predictions {
+  double no2_value = 1;
+  double pm10_value = 2;
+  double pm25_value = 3;
+}
+
+
+service Visualization {
+  rpc get_next(Predictions) returns(Empty);
+}

@@ -14,8 +14,8 @@ def update_data():
             # Call models to predict next value
             predict_data = prediction_stub.predict(data_sample)
 
-            #print to test it works
-            print('ok')
+            visualize_data = visualization_stub.get_next(predict_data)
+
     except Exception as e:
         print("Got an exception ", str(e))
 
@@ -28,6 +28,10 @@ data_stub = orchestrator_pb2_grpc.DatabrokerStub(data_channel)
 # open a gRPC channel for prediction server
 prediction_channel = grpc.insecure_channel("localhost:8062")
 prediction_stub = orchestrator_pb2_grpc.PredictionStub(prediction_channel)
+
+# open a gRPC channel for visualization server
+visualization_channel = grpc.insecure_channel("localhost:8063")
+visualization_stub = orchestrator_pb2_grpc.VisualizationStub(visualization_channel)
 
 ## do an update every 10 seconds
 schedule.every(10).seconds.do(update_data)
