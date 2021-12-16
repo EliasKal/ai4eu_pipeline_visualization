@@ -10,9 +10,21 @@ import pickle
 
 port = 8062
 
-# def pollutants_prediction(no2_vector, pm10_vector, pm25_vector):
 
-#     return (no2_model.predict(no2_vector),self.pm10_model.predict(pm10_vector), self.pm25_model.predict(pm25_vector))
+
+# no2_vector = np.frombuffer(no2_input).reshape(24,191)
+# pm10_vector = np.frombuffer(pm10_input).reshape(24,191)
+# pm25_vector = np.frombuffer(pm25_input).reshape(24,191)
+
+# #predict per sensor per model
+# results = np.empty([24, 3], dtype = float)
+# for i in range(no2_vector.shape[0]):
+#     results[i,0] = no2_model.predict(np.reshape(no2_vector[i,:],(-1,191)))
+#     results[i,1] = pm10_model.predict(np.reshape(pm10_vector[i,:],(-1,191)))
+#     results[i,2] = pm25_model.predict(np.reshape(pm25_vector[i,:],(-1,191)))
+
+
+# results_output = np.ndarray.tobytes(results)
 
 
 class Prediction(prediction_pb2_grpc.PredictionServicer):
@@ -28,16 +40,20 @@ class Prediction(prediction_pb2_grpc.PredictionServicer):
         no2 = request.no2_data
         pm10 = request.pm10_data
         pm25 = request.pm25_data
-
+        print(np.frombuffer(no2).shape)
         #convert to numpy from byte and reshape
-        no2 = np.frombuffer(no2).reshape(1,-1)
-        pm10 = np.frombuffer(pm10).reshape(1,-1)
-        pm25 = np.frombuffer(pm25).reshape(1,-1)
+        no2 = np.frombuffer(no2).reshape(24,191)
+        pm10 = np.frombuffer(pm10).reshape(24,191)
+        pm25 = np.frombuffer(pm25).reshape(24,191)
+        #predict per sensor per model
+        results = np.empty([24, 3], dtype = float)
+        for i in range(no2.shape[0]):
+            results[i,0] = self.no2_model.predict(np.reshape(no2[i,:],(-1,191)))
+            results[i,1] = self.pm10_model.predict(np.reshape(pm10[i,:],(-1,191)))
+            results[i,2] = self.pm25_model.predict(np.reshape(pm25[i,:],(-1,191)))
 
         #[0] helps with returning the value instead of numpy array
-        response.no2_value = self.no2_model.predict(no2)[0]
-        response.pm10_value = self.pm10_model.predict(pm10)[0]
-        response.pm25_value = self.pm25_model.predict(pm25)[0]
+        response.results = np.ndarray.tobytes(results)
 
         return response
 

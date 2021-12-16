@@ -13,6 +13,7 @@ def update_data():
 
             # Call models to predict next value
             predict_data = prediction_stub.predict(data_sample)
+            print('ok')
 
             visualize_data = visualization_stub.get_next(predict_data)
 

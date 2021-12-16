@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x12orchestrator.proto\"\x07\n\x05\x45mpty\"B\n\x08\x46\x65\x61tures\x12\x10\n\x08no2_data\x18\x01 \x01(\x0c\x12\x11\n\tpm10_data\x18\x02 \x01(\x0c\x12\x11\n\tpm25_data\x18\x03 \x01(\x0c\"H\n\x0bPredictions\x12\x11\n\tno2_value\x18\x01 \x01(\x01\x12\x12\n\npm10_value\x18\x02 \x01(\x01\x12\x12\n\npm25_value\x18\x03 \x01(\x01\x32+\n\nDatabroker\x12\x1d\n\x08get_next\x12\x06.Empty\x1a\t.Features20\n\nPrediction\x12\"\n\x07predict\x12\t.Features\x1a\x0c.Predictions21\n\rVisualization\x12 \n\x08get_next\x12\x0c.Predictions\x1a\x06.Emptyb\x06proto3'
+  serialized_pb=b'\n\x12orchestrator.proto\"\x07\n\x05\x45mpty\"B\n\x08\x46\x65\x61tures\x12\x10\n\x08no2_data\x18\x01 \x01(\x0c\x12\x11\n\tpm10_data\x18\x02 \x01(\x0c\x12\x11\n\tpm25_data\x18\x03 \x01(\x0c\"\x1e\n\x0bPredictions\x12\x0f\n\x07results\x18\x01 \x01(\x0c\x32+\n\nDatabroker\x12\x1d\n\x08get_next\x12\x06.Empty\x1a\t.Features20\n\nPrediction\x12\"\n\x07predict\x12\t.Features\x1a\x0c.Predictions21\n\rVisualization\x12 \n\x08get_next\x12\x0c.Predictions\x1a\x06.Emptyb\x06proto3'
 )
 
 
@@ -105,23 +105,9 @@ _PREDICTIONS = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='no2_value', full_name='Predictions.no2_value', index=0,
-      number=1, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='pm10_value', full_name='Predictions.pm10_value', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='pm25_value', full_name='Predictions.pm25_value', index=2,
-      number=3, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
+      name='results', full_name='Predictions.results', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -138,7 +124,7 @@ _PREDICTIONS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=99,
-  serialized_end=171,
+  serialized_end=129,
 )
 
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
@@ -176,8 +162,8 @@ _DATABROKER = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=173,
-  serialized_end=216,
+  serialized_start=131,
+  serialized_end=174,
   methods=[
   _descriptor.MethodDescriptor(
     name='get_next',
@@ -202,8 +188,8 @@ _PREDICTION = _descriptor.ServiceDescriptor(
   index=1,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=218,
-  serialized_end=266,
+  serialized_start=176,
+  serialized_end=224,
   methods=[
   _descriptor.MethodDescriptor(
     name='predict',
@@ -228,8 +214,8 @@ _VISUALIZATION = _descriptor.ServiceDescriptor(
   index=2,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=268,
-  serialized_end=317,
+  serialized_start=226,
+  serialized_end=275,
   methods=[
   _descriptor.MethodDescriptor(
     name='get_next',

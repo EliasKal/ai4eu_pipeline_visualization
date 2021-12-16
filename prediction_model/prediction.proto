@@ -7,9 +7,7 @@ message Features {
 }
 
 message Predictions {
-  double no2_value = 1;
-  double pm10_value = 2;
-  double pm25_value = 3;
+  bytes results = 1;
 }
 
 service Prediction {
