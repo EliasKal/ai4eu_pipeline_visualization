@@ -23,7 +23,7 @@ class Visualization(visualization_pb2_grpc.VisualizationServicer):
 
     def get_next(self, request, context):
         response = visualization_pb2.Empty()
-        data = [request.results]
+        data = request.results
         dataframe = np.frombuffer(data).reshape(24,3)
         data = np.concatenate((dataframe, self.sensor_gps.deviceID.to_numpy()[:,None]),axis=1)
         self.df = self.df.append(pd.DataFrame(data,columns=['NO2', 'PM10', 'PM2.5', 'deviceID']), ignore_index=True)
