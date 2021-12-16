@@ -30,7 +30,7 @@ Promise.all([
 		let d = data[i]
 		d.lat = sensorDict[d.deviceID].lat
 		d.lon = sensorDict[d.deviceID].lon
-		d.temperature = +d.temperature
+		// d.temperature = +d.temperature
 	}
 	console.log("data", data)
 
