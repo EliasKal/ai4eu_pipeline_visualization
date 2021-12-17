@@ -40,7 +40,7 @@ class Prediction(prediction_pb2_grpc.PredictionServicer):
         no2 = request.no2_data
         pm10 = request.pm10_data
         pm25 = request.pm25_data
-        print(np.frombuffer(no2).shape)
+        #print(np.frombuffer(no2).shape)
         #convert to numpy from byte and reshape
         no2 = np.frombuffer(no2).reshape(24,191)
         pm10 = np.frombuffer(pm10).reshape(24,191)
