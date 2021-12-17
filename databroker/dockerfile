@@ -1,0 +1,18 @@
+FROM ubuntu:18.04
+
+RUN apt-get update -y && \
+    apt-get install --no-install-recommends -y python3-pip python3-dev && \
+    apt clean && rm -rf /var/lib/apt/lists/*
+WORKDIR /
+COPY ./requirements.txt /requirements.txt
+RUN pip3 install --upgrade pip && pip3 install --no-cache-dir -r requirements.txt
+ 
+
+RUN useradd app
+
+USER app
+
+COPY license-1.0.0.json databroker.proto databroker_pb2.py databroker_pb2_grpc.py databroker.py./
+COPY . /
+
+ENTRYPOINT [ "python3","-u","databroker.py" ]

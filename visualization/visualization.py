@@ -34,20 +34,13 @@ class Visualization(visualization_pb2_grpc.VisualizationServicer):
         self.df.to_csv("./app/static/data/results.csv")
 
         
-        # with open("./app/static/data/results.csv",  'a+', encoding='UTF8', newline='') as f:
-        #     writer = csv.writer(f,delimiter = ",")
-        #     writer.writerow(data)
-        #     f.close()
         return response
 
 
-#create results file if it doesnt exist
-# if not os.path.exists('./app/static/data/results.csv'):
-#     header = ['NO2', 'PM10', 'PM2.5']
-#     with open("./app/static/data/results.csv",  'w+', encoding='UTF8', newline='') as f:
-#         writer = csv.writer(f, delimiter = ",")
-#         writer.writerow(header)
-#         f.close()        
+#delete results file if it exists so the data capture restarts
+if os.path.exists('./app/static/data/results.csv'):
+    os.remove('./app/static/data/results.csv')
+       
 
 #host server
 server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
