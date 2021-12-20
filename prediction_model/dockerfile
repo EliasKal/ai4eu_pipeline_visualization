@@ -6,15 +6,15 @@ RUN apt-get update -y && \
 WORKDIR /
 COPY ./requirements.txt /requirements.txt
 RUN pip3 install --upgrade pip && pip3 install --no-cache-dir -r requirements.txt
-COPY ./data /data 
+COPY ./models /models
 
 RUN useradd app
 
 USER app
 
-EXPOSE 8061
+EXPOSE 8062
 
-COPY license-1.0.0.json databroker.proto databroker_pb2.py databroker_pb2_grpc.py databroker.py ./
+COPY license-1.0.0.json prediction.proto prediction_pb2.py prediction_pb2_grpc.py prediction.py ./
 
 
-ENTRYPOINT [ "python3","-u","databroker.py" ]
+ENTRYPOINT [ "python3","-u","prediction.py" ]

@@ -6,15 +6,22 @@ RUN apt-get update -y && \
 WORKDIR /
 COPY ./requirements.txt /requirements.txt
 RUN pip3 install --upgrade pip && pip3 install --no-cache-dir -r requirements.txt
-COPY ./data /data 
 
-RUN useradd app
+RUN useradd -ms /bin/bash admin
 
-USER app
+COPY ./app /app
 
-EXPOSE 8061
-
-COPY license-1.0.0.json databroker.proto databroker_pb2.py databroker_pb2_grpc.py databroker.py ./
+RUN chown -R admin:admin ./app
+RUN chmod 755 ./app
 
 
-ENTRYPOINT [ "python3","-u","databroker.py" ]
+
+USER admin
+
+EXPOSE 8063
+EXPOSE 8064
+
+COPY license-1.0.0.json visualization.proto visualization_pb2.py visualization_pb2_grpc.py visualization.py run.py ./
+
+
+ENTRYPOINT [ "python3","-u","visualization.py" ]
