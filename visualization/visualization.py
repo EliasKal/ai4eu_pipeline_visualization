@@ -10,6 +10,7 @@ from app import app
 import numpy as np
 import pandas as pd
 import time
+import threading
 
 port = 8063
 
@@ -49,7 +50,8 @@ print("Starting server. Listening on port : " + str(port))
 server.add_insecure_port("[::]:{}".format(port))
 server.start()
 #viz_app = app()
-app.run(host="0.0.0.0", port=8064)
+threading.Thread(target=app.run(host="0.0.0.0", port=8064)).start()
+#app.run(host="0.0.0.0", port=8064)
 
 try:
     while True:
