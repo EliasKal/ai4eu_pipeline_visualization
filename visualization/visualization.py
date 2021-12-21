@@ -48,6 +48,7 @@ visualization_pb2_grpc.add_VisualizationServicer_to_server(Visualization(), serv
 print("Starting server. Listening on port : " + str(port))
 server.add_insecure_port("[::]:{}".format(port))
 server.start()
+#viz_app = app()
 app.run(host="0.0.0.0", port=8064)
 
 try:

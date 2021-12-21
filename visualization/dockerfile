@@ -23,5 +23,6 @@ EXPOSE 8064
 
 COPY license-1.0.0.json visualization.proto visualization_pb2.py visualization_pb2_grpc.py visualization.py run.py ./
 
+#CMD  gunicorn -t 0 -b :8064 visualization:viz_app
 
 ENTRYPOINT [ "python3","-u","visualization.py" ]
