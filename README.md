@@ -81,12 +81,12 @@ kubectl create namespace pipeline
 ```
 python3 kubernetes_client_script.py -n pipeline
 ```
-4. The client script returns an endpoint we need to run the orchestrator:   
+4. The client script returns an endpoint we need to use in the orchestrator:   
 ![endpoint](images/endpoint.png)  
 ```
 python3 orchestrator_client/orchestrator_client.py --endpoint=192.168.49.2:30002 --basepath=./
 ```
-5. In order to test if everything work we can check the status of our cluster in a new terminal:
+5. In order to test if our nodes are services are running we can check the status of our cluster in a new terminal:
 ```
 kubectl -n pipeline get pod,svc -o wide  
 ![cluster](images/cluster.png)  
