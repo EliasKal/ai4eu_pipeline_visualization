@@ -55,10 +55,10 @@ The visualization web interface can be seen in the picture.
 
 ## Deployment with AI4EU Experiments Platform
 
-In the AIEU Experiments Platform, we visit Design Studio tab and we open Acu-Compose application. After building the pipeline as depicted above we validate our design and choose deploy and deploy to local.
-![deploy_local](images/deploy.png)
-We download the solution package as a .zip file and extract it.
-![download_solution](images/solution.png)
+In the AIEU Experiments Platform, we visit Design Studio tab and we open Acu-Compose application. After building the pipeline as depicted above we validate our design and choose deploy and deploy to local.  
+![deploy_local](images/deploy.png)  
+We download the solution package as a .zip file and extract it.  
+![download_solution](images/solution.png)  
 
 In the solution folder we first install the required packages.
 ```
@@ -77,20 +77,20 @@ kubectl create namespace <namespace_name>
 ex.
 kubectl create namespace pipeline
 ```
-3. Run kubernetes client provided by the platform in the namespace we chose:
+3. Run kubernetes client provided by the platform in the namespace we chose:  
 ```
 python3 kubernetes_client_script.py -n pipeline
 ```
-4. The client script returns an endpoint we need to run the orchestrator:
-![endpoint](images/endpoint.png)
+4. The client script returns an endpoint we need to run the orchestrator:   
+![endpoint](images/endpoint.png)  
 ```
 python3 orchestrator_client/orchestrator_client.py --endpoint=192.168.49.2:30002 --basepath=./
 ```
 5. In order to test if everything work we can check the status of our cluster in a new terminal:
 ```
-kubectl -n pipeline get pod,svc -o wide
+kubectl -n pipeline get pod,svc -o wide  
+![cluster](images/cluster.png)  
 ```
-![cluster](images/cluster.png)
 6. To get an ip for the visualization component we need to run:
 ```
 minikube -n pipeline --url aqvisualization1webui
