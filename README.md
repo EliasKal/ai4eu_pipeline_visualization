@@ -13,7 +13,7 @@ All modules are provided as docker containers and implement the gRPC protocol fo
 
 # Pipeline
 
-![calibration_pipeline_acumos](https://user-images.githubusercontent.com/45718165/137711345-dfa5e2da-10b1-4436-80ca-f2f929b8bd99.png)
+![pipeline_ai4eu_platform](images/pipeline.png)
 
 # Component description
 
