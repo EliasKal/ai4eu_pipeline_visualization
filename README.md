@@ -24,33 +24,74 @@ This repository documents three possible alternatives for the deployment of this
 
 For the local deployment we need to run each module server in a separate terminal window using the following commands:
 
-### first terminal window
+### First terminal window
 ```
 cd databroker
 pip install -r requirements.txt
 python3 databroker.py
 ```
-### second terminal window
+### sSecond terminal window
 ```
 cd prediction_model
 pip install -r requirements.txt
 python3 prediction.py
 ```
-### third terminal window
+### Third terminal window
 ```
 cd visualization
 pip install -r requirements.txt
 python3 visualization.py
 ```
-### fourth terminal window
+### Fourth terminal window
 cd local_orchestrator
 pip install -r requirements.txt
 python3 local_orchestrator.py
 
-### output
-The flask server on the visualization terminal will return an ip address on port 8064 that we can open in our we browser by visiting http://localhost:8064
+### Output
+The flask server on the visualization terminal will return an ip address on port 8064 that we can open in our we browser by visiting http://localhost:8064.
 The visualization web interface can be seen in the picture.
 ![visualization](images/visualization.png)
 
 
 ## Deployment with AI4EU Experiments Platform
+
+In the AIEU Experiments Platform, we visit Design Studio tab and we open Acu-Compose application. After building the pipeline as depicted above we validate our design and choose deploy and deploy to local.
+![deploy_local](images/deploy.png)
+We download the solution package as a .zip file and extract it.
+![download_solution](images/solution.png)
+
+In the solution folder we first install the required packages.
+```
+pip install -r requirements.txt
+```
+In order to run the pipeline, we need to install [docker](https://docs.docker.com/engine/install/) and [minikube](https://minikube.sigs.k8s.io/docs/start/).
+
+In a terminal window we follow the instructions:
+1. Start minikube:
+```
+minikube start
+```
+2. Create a new namespace for our pipeline:
+```
+kubectl create namespace <namespace_name>
+ex.
+kubectl create namespace pipeline
+```
+3. Run kubernetes client provided by the platform in the namespace we chose:
+```
+python3 kubernetes_client_script.py -n pipeline
+```
+4. The client script returns an endpoint we need to run the orchestrator:
+![endpoint](images/endpoint.png)
+```
+python3 orchestrator_client/orchestrator_client.py --endpoint=192.168.49.2:30002 --basepath=./
+```
+5. In order to test if everything work we can check the status of our cluster in a new terminal:
+```
+kubectl -n pipeline get pod,svc -o wide
+```
+![cluster](images/cluster.png)
+6. To get an ip for the visualization component we need to run:
+```
+minikube -n pipeline --url aqvisualization1webui
+```
